@@ -6,4 +6,4 @@ print(x[::-1])
 
 for i in(x):
     if i=="i":
-        print("True2")
+        print("True2 TEST")
