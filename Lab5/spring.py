@@ -10,12 +10,9 @@ def main():
         spring_date = spring_start_date(temperatures)
         print(f"Vårens ankomst: {spring_date}")
 
-    except ValueError as e:
-        # Hanterar fel och skriver ut ett användarvänligt meddelande
-        print(e)
     except Exception as e:
-        # Hanterar oväntade fel
-        print(f"Ett oväntat fel inträffade: {e}")
+        # Hanterar fel och skriver ut ett användarvänligt meddelande
+        print(f' {e}')
 
 if __name__ == "__main__":
     main()
