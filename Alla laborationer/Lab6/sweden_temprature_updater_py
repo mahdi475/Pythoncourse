@@ -1,0 +1,24 @@
+import json
+
+# Läs in JSON-filen
+filename = "python/Alla laborationer/Lab6/sweden_temperatures.json"
+
+
+with open(filename, "r") as file:
+    temperatures = json.load(file)
+
+month = input("temperature: ").capitalize()
+new_temp = int(input("temperature: "))
+
+if month in temperatures:
+    print(new_temp, temperatures[month])
+    if new_temp > temperatures[month]:
+        temperatures[month] = new_temp
+        print("Record updated successfully!")
+    else:
+        print("No update needed.")
+else:
+    print("Invalid month name!")
+
+with open(filename, "w") as file:
+    json.dump(temperatures, file, ensure_ascii=False)
